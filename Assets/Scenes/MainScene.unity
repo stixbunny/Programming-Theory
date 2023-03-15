@@ -223,7 +223,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23746
+  m_Name: pb_Mesh24070
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -640,8 +640,9 @@ GameObject:
   - component: {fileID: 1036696257}
   - component: {fileID: 1036696262}
   - component: {fileID: 1036696263}
+  - component: {fileID: 1036696264}
   m_Layer: 0
-  m_Name: Piramid
+  m_Name: Pyramid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,6 +912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a3835ad364ab049b02d0301c80c92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1158936688}
+  isSelected: 0
 --- !u!114 &1036696263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,6 +932,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!54 &1036696264
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036696256}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &1158936687
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,6 +1006,7 @@ GameObject:
   - component: {fileID: 1500402301}
   - component: {fileID: 1500402305}
   - component: {fileID: 1500402306}
+  - component: {fileID: 1500402307}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1084,7 +1104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fbd4c0c4dbc7c14ab8695b06b6053fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1158936688}
+  isSelected: 0
 --- !u!114 &1500402306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1124,22 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!54 &1500402307
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500402300}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &1541695445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1185,7 @@ GameObject:
   - component: {fileID: 1727431599}
   - component: {fileID: 1727431603}
   - component: {fileID: 1727431604}
+  - component: {fileID: 1727431605}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1245,6 +1283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e981cf525c473e948908498e30bf4b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1158936688}
+  isSelected: 0
 --- !u!114 &1727431604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,3 +1303,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!54 &1727431605
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727431598}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0

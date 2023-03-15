@@ -6,17 +6,21 @@ public abstract class Shape : MonoBehaviour
 {
     public GameManager gameManager;
     private Outline outline;
+    protected Rigidbody shapeRb;
+    protected string m_shapeName;
+    public bool isSelected;
 
     protected void Awake()
     {
         gameManager = GameManager.Instance;
         outline = GetComponent<Outline>();
         outline.OutlineWidth = 10;
+        shapeRb = GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
-        
+
     }
 
     private void OnMouseEnter()
@@ -39,7 +43,7 @@ public abstract class Shape : MonoBehaviour
 
     }
 
-    public virtual void ChangeName()
+    public virtual void ChangeName(string newName)
     {
 
     }

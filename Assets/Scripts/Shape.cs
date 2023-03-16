@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public abstract class Shape : MonoBehaviour
 {
     public GameManager gameManager;
     private Outline outline;
     protected Rigidbody shapeRb;
+    // ENCAPSULATION
     protected string m_shapeName;
     public int color;
     public bool isSelected;
@@ -18,11 +20,6 @@ public abstract class Shape : MonoBehaviour
         outline.OutlineWidth = 10;
         shapeRb = GetComponent<Rigidbody>();
         color = 0;
-    }
-
-    private void Update()
-    {
-
     }
 
     private void OnMouseEnter()
@@ -43,7 +40,6 @@ public abstract class Shape : MonoBehaviour
 
     public void Deselect()
     {
-        //shapeRb.freezeRotation = true;
         shapeRb.isKinematic = true;
     }
 
@@ -70,7 +66,7 @@ public abstract class Shape : MonoBehaviour
         }
     }
 
-
+    // POLYMORPHISM
     public virtual void ShapeRotation()
     {
 

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Cube : Shape
 {
+    // ENCAPSULATION
     public string shapeName
     {
         get {return m_shapeName;}
@@ -25,23 +27,27 @@ public class Cube : Shape
         shapeName = "Cube";
     }
 
+    // POLYMORPHISM
     public override void ShapeRotation()
     {
         shapeRb.AddTorque(10, 10, 0);
     }
 
+    // POLYMORPHISM
     public override void ChangeName(string newName)
     {
         if(newName != ""){
             shapeName = newName;
         }
     }
-    
+
+    // POLYMORPHISM
     public override string getName()
     {
         return shapeName;
     }
 
+    // POLYMORPHISM
     public override string getSalutation()
     {
         return $"Henlo, I'm {shapeName}!";

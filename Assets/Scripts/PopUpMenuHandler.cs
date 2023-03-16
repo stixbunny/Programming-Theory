@@ -24,11 +24,6 @@ public class PopUpMenuHandler : MonoBehaviour
     private int selectedColor;
     private Shape selectedShape = null;
 
-    private void Start()
-    {
-        
-    }
-
     public void Hide()
     {
         selectedShape = null;
@@ -41,8 +36,8 @@ public class PopUpMenuHandler : MonoBehaviour
         gameObject.SetActive(true);
         helloText.SetText(selectedShape.getSalutation());
         selectedColor = selectedShape.color;
-        Debug.Log($"Color in popup is {selectedColor}, selected shape is {selectedShape.name}");
         ChangeToggleColor(selectedColor);
+        nameInput.text = "";
     }
 
     public void Save()
@@ -58,9 +53,9 @@ public class PopUpMenuHandler : MonoBehaviour
         selectedColor = color;
     }
 
+    // ABSTRACTION
     public void ChangeToggleColor(int color)
     {
-        Debug.Log($"Selecting color number {color} in toggle UI");
         switch(color) {
             case 0:
                 whiteToggle.isOn = true;

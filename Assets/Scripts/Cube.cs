@@ -11,20 +11,18 @@ public class Cube : Shape
             if(value[0] != 'C') {
                 Debug.LogError("Cube name must start with a C.");
             }
+            else if(value.Length > 10) {
+                Debug.LogError("Name must not exceed 10 characters");
+            }
             else {
                 m_shapeName = value;
             }
         }
     }
 
-    private void Start() {
-        
-        ShapeRotation();
-    }
-
-    public override void Selected()
+    private void Start()
     {
-
+        shapeName = "Cube";
     }
 
     public override void ShapeRotation()
@@ -34,6 +32,18 @@ public class Cube : Shape
 
     public override void ChangeName(string newName)
     {
-        shapeName = newName;
+        if(newName != ""){
+            shapeName = newName;
+        }
+    }
+    
+    public override string getName()
+    {
+        return shapeName;
+    }
+
+    public override string getSalutation()
+    {
+        return $"Henlo, I'm {shapeName}!";
     }
 }

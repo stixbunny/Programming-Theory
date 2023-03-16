@@ -11,15 +11,19 @@ public class Sphere : Shape
             if(value[0] != 'S') {
                 Debug.LogError("Sphere name must start with an S.");
             }
+            else if(value.Length > 10) {
+                Debug.LogError("Name must not exceed 10 characters");
+            }
             else {
                 m_shapeName = value;
             }
         }
     }
 
-    public override void Selected()
+    private void Start()
     {
-
+        shapeName = "Sphere";
+        
     }
 
     public override void ShapeRotation()
@@ -29,6 +33,18 @@ public class Sphere : Shape
 
     public override void ChangeName(string newName)
     {
-        shapeName = newName;
+        if(newName != ""){
+            shapeName = newName;
+        }
+    }
+
+    public override string getName()
+    {
+        return shapeName;
+    }
+
+    public override string getSalutation()
+    {
+        return $"Howdy, {shapeName} here!";
     }
 }

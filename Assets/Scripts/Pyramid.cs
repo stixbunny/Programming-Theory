@@ -11,15 +11,19 @@ public class Pyramid : Shape
             if(value[0] != 'P') {
                 Debug.LogError("Pyramid name must start with a P.");
             }
+            else if(value.Length > 10) {
+                Debug.LogError("Name must not exceed 10 characters");
+            }
             else {
                 m_shapeName = value;
             }
         }
     }
 
-    public override void Selected()
+    private void Start()
     {
-
+        shapeName = "Pyramid";
+        
     }
 
     public override void ShapeRotation()
@@ -29,6 +33,18 @@ public class Pyramid : Shape
 
     public override void ChangeName(string newName)
     {
-        shapeName = newName;
+        if(newName != ""){
+            shapeName = newName;
+        }
+    }
+    
+    public override string getName()
+    {
+        return shapeName;
+    }
+
+    public override string getSalutation()
+    {
+        return $"Hi, it's {shapeName}!";
     }
 }
